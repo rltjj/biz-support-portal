@@ -31,13 +31,23 @@
 
     <section id="location">
       <h2>오시는 길</h2>
-      <p>주소: 서울시 ○○구 ○○로 123</p>
-      <iframe src="https://maps.app.goo.gl/j7Pm1UmjH53kLwV27" width="600" height="450" style="border:0;"
-        allowfullscreen="" loading="lazy">
-      </iframe>
+      <p>주소: 부산광역시 남구 신선로 410 동명대학교 산학협력관 210호</p>
+      <div id="map" style="width:600px; height:400px;"></div>
     </section>
-  </main>
 
+    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=49b31837349a7da7b8a4600ee6acafa7"></script>
+    <script>
+      window.onload = function () {
+        var container = document.getElementById('map');
+        var options = {
+          center: new kakao.maps.LatLng(35.1210, 129.0996),
+          level: 3
+        };
+        var map = new kakao.maps.Map(container, options);
+      }
+    </script>
+
+  </main>
 
   <div id="footer"></div>
 
