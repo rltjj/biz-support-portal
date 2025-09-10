@@ -1,21 +1,56 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8">
-  <title>주식회사 성진글로벌</title>
+    <meta charset="UTF-8">
+    <title>주식회사 성진글로벌</title>
 </head>
+
 <body>
 
-  <div id="header"></div>
+    <div id="header"></div>
 
-  <main>
-    <h1>Hello World!</h1>
-    <p>이건 테스트 페이지입니다.(안내)</p>
-  </main>
+    <main>
+        <h1>상품 서비스 안내</h1>
 
-  <div id="footer"></div>
+        <div class="product-cards">
+            <div class="card" onclick="location.href='/details/startup.html'">
+                <h3>창업·중소기업 지원</h3>
+                <p>벤처기업·창업기업·중소기업·여성기업 확인</p>
+                <button>자세히보기</button>
+            </div>
 
-  <script src="js/script.js"></script>
+            <div class="card" onclick="location.href='/details/innovation.html'">
+                <h3>인증·혁신 지원</h3>
+                <p>이노비즈·메인비즈·ISO 인증 등</p>
+                <button>자세히보기</button>
+            </div>
+
+            <div class="card" onclick="location.href='/details/ip.html'">
+                <h3>지식재산(IP) 기반 지원</h3>
+                <p>상표권 등록, 특허(일반)</p>
+                <button>자세히보기</button>
+            </div>
+
+            <div class="card" onclick="location.href='/details/digital.html'">
+                <h3>디지털 & 홍보 지원</h3>
+                <p>홈페이지 제작, CI·영상·서버 관리 등</p>
+                <button>자세히보기</button>
+            </div>
+
+            <div class="card" onclick="location.href='/details/document.html'">
+                <h3>문서 기반 투자·신청 지원</h3>
+                <p>사업계획서, 회사소개서/IR 자료</p>
+                <button>자세히보기</button>
+            </div>
+        </div>
+    </main>
+
+
+    <div id="footer"></div>
+
+    <script src="/js/script.js"></script>
 
 </body>
+
 </html>
