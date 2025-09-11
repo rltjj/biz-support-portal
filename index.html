@@ -1,52 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <title>주식회사 성진글로벌</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
 
   <div id="header"></div>
 
   <main>
-    <h1>회사 소개</h1>
-
-    <section id="overview">
-      <h2>사업개요</h2>
-      <p>주식회사 성진글로벌은 ... (간단한 소개 내용)</p>
-    </section>
-
-
-    <section id="partners">
-      <h2>협력사 현황</h2>
-      <ul>
-        <li>협력사 1</li>
-        <li>협력사 2</li>
-        <li>협력사 3</li>
-      </ul>
-    </section>
-
-    <section id="location">
-      <h2>오시는 길</h2>
-      <p>주소: 부산광역시 남구 신선로 410 동명대학교 산학협력관 210호</p>
-      <div id="map" style="width:600px; height:400px;"></div>
-    </section>
-
-    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=49b31837349a7da7b8a4600ee6acafa7"></script>
-    <script>
-      window.onload = function () {
-        var container = document.getElementById('map');
-        var options = {
-          center: new kakao.maps.LatLng(35.1210, 129.0996),
-          level: 3
-        };
-        var map = new kakao.maps.Map(container, options);
-      }
-    </script>
-
+    <h1>Hello World!</h1>
+    <p>이건 테스트 페이지입니다.(메인)</p>
   </main>
 
   <div id="footer"></div>
@@ -54,5 +19,4 @@
   <script src="/js/script.js"></script>
 
 </body>
-
 </html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>주식회사 성진글로벌</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <main>
+    <h1>회사 소개</h1>
+
+    <section id="overview">
+      <h2>사업개요</h2>
+      <p>성진글로벌은 단순한 인증·특허 대행사가 아니라, 기업의 <b>성장 엔진</b>을 설계하는 전략적 파트너입니다. 
+        CI·홈페이지·특허·인증의 종합 지원을 통해 신뢰받는 브랜드를 구축하고, 정부 정책자금과 투자 유치를 현실화하여 기업의 자본력과 경쟁력을 동시에강화합니다. 
+        중소·벤처·이노비즈·ISO 인증은 곧 <b>국내외 시장 진입의 관문</b>이며, 이는 자금 조달·세제 혜택·공공조달 가점을 통해 즉각적인 성과로 이어집니다. 
+        성진글로벌과 함께라면 기업은 단기적 성장과 장기적 비전을 동시에 실현하며, "국내를 넘어 글로벌 무대에서 인정받는 혁신기업"으로 도약할 수 있습니다.</p>
+    </section>
+
+
+    <section id="partners">
+      <h2>협력사 현황</h2>
+      <ul>
+        <li>협력사 1</li>
+        <li>협력사 2</li>
+        <li>협력사 3</li>
+      </ul>
+    </section>
+
+    <section id="location">
+      <h2>오시는 길</h2>
+      <p>주소: 부산광역시 남구 신선로 410 동명대학교 산학협력관 210호</p>
+      <div id="map" style="width:600px; height:400px;"></div>
+      <button id="directionBtn"
+        style="margin-top:10px; padding:8px 16px; border:none; background:#3c84ff; color:white; border-radius:6px; cursor:pointer;">
+        길찾기
+      </button>
+    </section>
+
+    <!-- 카카오 지도 SDK -->
+    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=49b31837349a7da7b8a4600ee6acafa7"></script>
+    <script>
+      window.onload = function () {
+        var container = document.getElementById('map');
+        var options = {
+          center: new kakao.maps.LatLng(35.1210, 129.0996), // 동명대학교 근처 좌표
+          level: 3
+        };
+
+        // 지도 생성
+        var map = new kakao.maps.Map(container, options);
+
+        // 마커 생성
+        var markerPosition = new kakao.maps.LatLng(35.1210, 129.0996);
+        var marker = new kakao.maps.Marker({
+          position: markerPosition
+        });
+        marker.setMap(map);
+
+        // 길찾기 버튼 클릭 이벤트
+        document.getElementById('directionBtn').addEventListener('click', function () {
+          var url = "https://map.kakao.com/link/to/동명대학교산학협력관,35.1210,129.0996";
+          window.open(url, "_blank"); // 새창에서 카카오맵 열기
+        });
+      }
+    </script>
+
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="/js/script.js"></script>
+
+</body>
+
+</html>
