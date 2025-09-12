@@ -1,17 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8">
-  <title>주식회사 성진글로벌</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>중소기업지원 센터 – 정부정책자금 · 법인지원 · 기업인증 · ISO</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
 
   <div id="header"></div>
+  <br><br>
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <span class="pill">빠른상담·전국대행</span>
+        <h1>정부정책자금 · 법인지원 · 기업인증 · ISO를<br />한 번에 해결하는 <em class="accent">원스톱 컨설팅</em></h1>
+        <p>소상공인부터 중견까지, 맞춤형 심사전략과 준비서류 설계로 승인확률을 높입니다. 평균 7일 이내 1차 검토, 서류 템플릿 즉시 제공.</p>
+        <div class="hero-buttons">
+          <a class="btn" href="#contact">빠른 상담 요청</a>
+          <a class="btn secondary" href="#services">서비스 한눈에</a>
+        </div>
+        <div class="kpi">
+          <div class="card">
+            <div class="val">97%</div>
+            <div class="small">재방문의사/만족도</div>
+          </div>
+          <div class="card">
+            <div class="val">7일</div>
+            <div class="small">평균 1차 검토</div>
+          </div>
+          <div class="card">
+            <div class="val">24h</div>
+            <div class="small">상담 접수 응답</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>즉시 상담 신청</h2>
+        <form class="form" id="leadForm">
+          <div>
+            <label>이름(회사명)</label>
+            <input required name="name" placeholder="홍길동 / (주)예시" />
+          </div>
+          <div>
+            <label>연락처</label>
+            <input required name="phone" placeholder="010-1234-5678" />
+          </div>
+          <div>
+            <label>관심 서비스</label>
+            <select name="svc">
+              <option>정부정책자금</option>
+              <option>법인지원(재무/세무·노무/법무)</option>
+              <option>기업인증(연구소/벤처/이노비즈/메인비즈)</option>
+              <option>ISO(9001/14001)</option>
+            </select>
+          </div>
+          <div>
+            <label>요청사항</label>
+            <textarea name="memo" rows="3" placeholder="필요금액, 업종, 법인/개인, 매출, 기타"></textarea>
+          </div>
+          <label class="checkbox-label">
+            <input type="checkbox" required /> 개인정보처리방침 동의
+          </label>
+          <button class="btn" type="submit">상담 접수</button>
+          <div id="msg" class="small"></div>
+        </form>
+      </div>
+    </section>
 
-  <main>
-    <h1>Hello World!</h1>
-    <p>이건 테스트 페이지입니다.(메인)</p>
+    <!-- Services -->
+    <section id="services" class="section">
+      <h2>핵심 서비스</h2>
+      <div class="grid cols-4">
+        <div class="card service">
+          <div class="ico">₩</div>
+          <div>
+            <strong>정부정책자금</strong>
+            <div class="small">소상공인/소기업/중기업 운전자금·시설자금·창업자금</div>
+          </div>
+        </div>
+        <div class="card service">
+          <div class="ico">🏢</div>
+          <div>
+            <strong>법인지원</strong>
+            <div class="small">재무/세무, 가지급금, 노무/법무, 법인전환, 영업권평가</div>
+          </div>
+        </div>
+        <div class="card service">
+          <div class="ico">🏅</div>
+          <div>
+            <strong>기업인증</strong>
+            <div class="small">연구소인증, 벤처, 이노비즈, 메인비즈</div>
+          </div>
+        </div>
+        <div class="card service">
+          <div class="ico">✔️</div>
+          <div>
+            <strong>ISO(시스템인증)</strong>
+            <div class="small">ISO9001/14001</div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <div id="footer"></div>
@@ -19,4 +112,5 @@
   <script src="/js/script.js"></script>
 
 </body>
+
 </html>
