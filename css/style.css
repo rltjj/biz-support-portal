@@ -1,11 +1,11 @@
 :root {
-  --bg: #0b1020;
-  --card: #12182b;
+  --bg: #ffffff;
+  --card: #003663;
   --text: #eaf0ff;
   --muted: #a8b3cf;
-  --accent: #66e3ff;
-  --accent2: #7af0b2;
-  --line: #1f2842;
+  --accent: #185aa5;
+  --accent2: #185aa5;
+  --line: #7593ec;
   --warn: #ffd166;
 }
 
@@ -34,7 +34,6 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #0b1020; 
   padding: 0.5rem 16rem;
   z-index: 100;
 }
@@ -47,7 +46,7 @@ header nav {
 
 header nav a {
   margin-left: 1rem;
-  color: #eaf0ff;
+  color: #185aa5;
   text-decoration: none;
   font-weight: 500;
 }
@@ -68,8 +67,7 @@ footer {
   justify-content: center;
   align-items: center; 
   padding: 2rem 1rem;
-  background: #0b1020;
-  color: #a8b3cf;
+  color: #185aa5;
   text-align: center;
 }
 
