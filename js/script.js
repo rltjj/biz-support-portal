@@ -3,6 +3,11 @@ async function loadHTML(id, file) {
     const res = await fetch(file);
     if (!res.ok) throw new Error(`Failed to fetch ${file}`);
     document.getElementById(id).innerHTML = await res.text();
+
+    if (id === "header") {
+      initHamburger();
+    }
+
   } catch (err) {
     console.error(err);
   }
@@ -11,18 +16,38 @@ async function loadHTML(id, file) {
 document.addEventListener("DOMContentLoaded", () => {
   loadHTML("header", "/header.html");
   loadHTML("footer", "/footer.html");
+
+  const modal = document.getElementById("contactModal");
+  const closeBtn = document.getElementById("closeModalBtn");
+  const form = document.getElementById("contactForm");
+
+  if (modal) modal.style.display = "block";
+  if (closeBtn) closeBtn.onclick = () => { modal.style.display = "none"; };
+
+  if (form) {
+    form.onsubmit = (e) => {
+      e.preventDefault();
+      const message = form.message.value;
+      const phone = form.phone.value;
+
+      console.log("보낼 데이터:", { message , phone });
+      alert("메시지가 전송되었습니다!");
+      form.reset();
+      modal.style.display = "none";
+    };
+  }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('leadForm');
-  const msg = document.getElementById('msg');
+function initHamburger() {
+  const hamburgerBtn = document.getElementById("hamburgerBtn");
+  const navLinks = document.getElementById("navLinks");
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(form).entries());
+  if (!hamburgerBtn || !navLinks) {
+    console.warn("Hamburger elements not found in header");
+    return;
+  }
 
-    localStorage.setItem('sme_lead', JSON.stringify({ ...data, ts: new Date().toISOString() }));
-    msg.textContent = '접수 완료! 담당자가 곧 연락드립니다.';
-    form.reset();
+  hamburgerBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
   });
-});
+}

@@ -7,12 +7,47 @@
   <title>기업경영지원센터</title>
   <link rel="stylesheet" href="/css/headerfooter.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/popup.css">
 </head>
 
 <body>
 
   <div id="header"></div>
-  <br><br><br><br>
+  <br><br><br>
+
+
+  <div id="contactModal" class="popup">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="status-dot"></span>
+        <h2>빠른상담신청</h2>
+        <span id="closeModalBtn" class="close">&times;</span>
+      </div>
+
+      <div class="modal-body">
+        <form id="contactForm">
+          <label for="message">메시지</label>
+          <textarea id="message" name="message" rows="4" placeholder="궁금하신 점을 문자로 남겨주시면 연락 드리겠습니다." required></textarea>
+
+          <label for="phone">연락처</label>
+          <input type="text" id="phone" name="phone" required>
+
+          <div class="consent">
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree">
+              <a href="#">개인정보 수집 및 이용</a>에 동의합니다.
+            </label>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="submit" form="contactForm">보내기</button>
+      </div>
+    </div>
+  </div>
+
+
   <main class="container">
     <section class="hero">
       <div>
@@ -45,7 +80,8 @@
         <strong>운전자금</strong>
         <div class="ex">원자재의 구매, 생산판매 활동등 기업의 운영에 소요되는 운전자금을 기업의 금융비용 절감을 위해 정부에서 저금리로 지원하는 정부 정책자금입니다.</div>
         <strong>시설자금</strong>
-        <div class="ex">공장 건물, 사무소, 점포 등 영업 활동의 기초가 되는 고정시설에 투자되는 자금을 의미하며, 시설물 매입이나 공사 착공을 위한 자금입니다. 기계매입전 또는 공사전 시설자금을 대출을 신청진행할 수 있습니다.</div>
+        <div class="ex">공장 건물, 사무소, 점포 등 영업 활동의 기초가 되는 고정시설에 투자되는 자금을 의미하며, 시설물 매입이나 공사 착공을 위한 자금입니다. 기계매입전 또는 공사전 시설자금을
+          대출을 신청진행할 수 있습니다.</div>
         <strong>특허대출</strong>
         <div class="ex">기업이 보유한 지적 재산권을 가치평가를 하여 이를 담보로자금을 조달할 수 있도록 평가비용을 지원하는데 성장성과 기술력을 통한 특허 자금 조달 방식입니다.</div>
         <strong>그외</strong>

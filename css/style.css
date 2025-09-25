@@ -36,9 +36,37 @@ a {
   align-items: center;
 }
 
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.6rem, 1.2rem + 2vw, 2.4rem);
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .kpi {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .kpi {
+    grid-template-columns: 1fr;
+  }
+}
+
 .pill {
   font-size: .8rem;
-  padding: .35rem .6rem;
+  padding: .4rem .6rem;
   border-radius: 999px;
   background: var(--warn);
   color: #1b1200;
@@ -90,7 +118,7 @@ a {
 
 .kpi .card {
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0.5rem 1rem;
   background: var(--card);
   border-radius: 16px;
 }
@@ -114,7 +142,11 @@ a {
   border: 24px solid var(--warn);
   background-color: var(--bg);
   border-radius: 16px;
-  padding: 0.5rem 0.5rem 2rem;
+  padding: 1.2rem;
+}
+
+.contact-card img{
+  width: 12px;
 }
 
 .contact-card strong {
@@ -151,7 +183,7 @@ a {
 
 .contact-card .contact-btn {
   position: absolute;
-  top: -68px; 
+  top: -60px; 
   right: -1rem;
   background-color: var(--warn);
   color: var(--text);
@@ -168,6 +200,18 @@ a {
 
 .contact-card .contact-btn .ico {
   font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 1rem;
+  }
+
+  .contact-card .contact-btn {
+    position: static;
+    margin: 0 auto 1rem;
+    display: block;
+  }
 }
 
 .section {
