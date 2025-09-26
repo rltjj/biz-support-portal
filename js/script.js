@@ -30,12 +30,25 @@ document.addEventListener("DOMContentLoaded", () => {
       const message = form.message.value;
       const phone = form.phone.value;
 
-      console.log("보낼 데이터:", { message , phone });
+      console.log("보낼 데이터:", { message, phone });
       alert("메시지가 전송되었습니다!");
       form.reset();
       modal.style.display = "none";
     };
   }
+
+  const openConsent = document.getElementById("openConsent");
+  const consentText = document.getElementById("consentText");
+
+  openConsent.addEventListener("click", function(e){
+    e.preventDefault();
+    if(consentText.style.display === "none"){
+      consentText.style.display = "block";
+    } else {
+      consentText.style.display = "none";
+    }
+  });
+
 });
 
 function initHamburger() {

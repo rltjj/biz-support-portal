@@ -5,16 +5,16 @@
 
 .popup {
   position: fixed;
-  top: 4rem;
+  top: 6rem;
   right: 4rem;
   width: 280px;
   max-width: 90%;
   background: #fff;
   border-radius: 20px;
   border: 3px solid var(--hf);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  display: none; 
+  display: none;
   font-family: 'KoPubWorldDotum', sans-serif;
   overflow: hidden;
 }
@@ -81,22 +81,22 @@
 }
 
 .modal-body .consent input[type="checkbox"] {
-  width: auto; 
+  width: auto;
   height: auto;
-  margin: 0 6px 0 0; 
+  margin: 0 6px 0 0;
   padding: 0;
   flex-shrink: 0;
 }
 
 .modal-body .consent label {
-  display: inline-flex; 
+  display: inline-flex;
   align-items: center;
-  gap: 0;                
+  gap: 0;
 }
 
-.modal-body .consent label a{
-  color: blue; 
-  text-decoration: underline;             
+.modal-body .consent label a {
+  color: blue;
+  text-decoration: underline;
 }
 
 .modal-footer {
@@ -120,4 +120,11 @@
 
 .modal-footer button:hover {
   background-color: var(--hf);
+}
+
+#consentText {
+  display: none;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #000000;
 }

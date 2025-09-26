@@ -35,7 +35,7 @@ header nav.container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.6rem 3rem;
+  padding: 0.6rem 3%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -80,7 +80,7 @@ header nav.container {
   text-decoration: none;
   font-family: 'KoPubWorldDotum', sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .navlinks a:hover {
@@ -115,7 +115,7 @@ header nav.container {
   }
 
   .navlinks a {
-    font-size: 14px;
+    font-size: 20px;
     color: #000;
     border: none;
   }

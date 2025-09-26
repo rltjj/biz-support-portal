@@ -13,7 +13,7 @@
 <body>
 
   <div id="header"></div>
-  <br><br><br>
+  <br><br>
 
 
   <div id="contactModal" class="popup">
@@ -35,8 +35,15 @@
           <div class="consent">
             <input type="checkbox" id="agree" name="agree" required>
             <label for="agree">
-              <a href="#">개인정보 수집 및 이용</a>에 동의합니다.
+              <a href="#" id="openConsent">개인정보 수집 및 이용</a>에 동의합니다.
             </label>
+          </div>
+
+          <div id="consentText">
+            <p><strong>1. 수집 항목:</strong> 이름, 연락처, 메시지</p>
+            <p><strong>2. 수집 목적:</strong> 문의사항에 대한 답변 및 상담 진행</p>
+            <p><strong>3. 보관 기간:</strong> 관련 법령에 따라 3년간 보관 후 파기</p>
+            <p><strong>4. 동의 거부권:</strong> 동의를 거부할 수 있으나, 이 경우 서비스 이용이 제한될 수 있습니다.</p>
           </div>
         </form>
       </div>
@@ -46,7 +53,6 @@
       </div>
     </div>
   </div>
-
 
   <main class="container">
     <section class="hero">
@@ -73,20 +79,24 @@
           </div>
         </div>
       </div>
-      <div class="card contact-card">
-        <button class="contact-btn">
-          <img id="speech" src="/images/speech.png" alt="카톡채널"><a href="http://pf.kakao.com/_mASDn">문의</a>
-        </button>
-        <strong>운전자금</strong>
-        <div class="ex">원자재의 구매, 생산판매 활동등 기업의 운영에 소요되는 운전자금을 기업의 금융비용 절감을 위해 정부에서 저금리로 지원하는 정부 정책자금입니다.</div>
-        <strong>시설자금</strong>
-        <div class="ex">공장 건물, 사무소, 점포 등 영업 활동의 기초가 되는 고정시설에 투자되는 자금을 의미하며, 시설물 매입이나 공사 착공을 위한 자금입니다. 기계매입전 또는 공사전 시설자금을
-          대출을 신청진행할 수 있습니다.</div>
-        <strong>특허대출</strong>
-        <div class="ex">기업이 보유한 지적 재산권을 가치평가를 하여 이를 담보로자금을 조달할 수 있도록 평가비용을 지원하는데 성장성과 기술력을 통한 특허 자금 조달 방식입니다.</div>
-        <strong>그외</strong>
-        <div class="ex">중소기업진흥공단, 소상공인진흥공단, 기술보증기금, 신용보증기금, 신용보증재단, 한국무역보험공사, 부산경제진흥원등의 대출 상품에 따라 자금신청이 가능합니다.</div>
+      <div class="contact-wrapper">
+        <div class="card contact-card">
+          <strong>운전자금</strong>
+          <div class="ex">원자재의 구매, 생산판매 활동등 기업의 운영에 소요되는 운전자금을 기업의 금융비용 절감을 위해 정부에서 저금리로 지원하는 정부 정책자금입니다.</div>
+          <strong>시설자금</strong>
+          <div class="ex">공장 건물, 사무소, 점포 등 영업 활동의 기초가 되는 고정시설에 투자되는 자금을 의미하며, 시설물 매입이나 공사 착공을 위한 자금입니다. 기계매입전 또는 공사전
+            시설자금을 대출을 신청진행할 수 있습니다.</div>
+          <strong>특허대출</strong>
+          <div class="ex">기업이 보유한 지적 재산권을 가치평가를 하여 이를 담보로자금을 조달할 수 있도록 평가비용을 지원하는데 성장성과 기술력을 통한 특허 자금 조달 방식입니다.</div>
+          <strong>그외</strong>
+          <div class="ex">중소기업진흥공단, 소상공인진흥공단, 기술보증기금, 신용보증기금, 신용보증재단, 한국무역보험공사, 부산경제진흥원등의 대출 상품에 따라 자금신청이 가능합니다.</div>
+        </div>
+
+        <a class="contact-btn" href="http://pf.kakao.com/_mASDn">
+          <img id="speech" src="/images/speech.png" alt="카톡채널">문의하기
+        </a>
       </div>
+
     </section>
 
     <!-- Services -->
