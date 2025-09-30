@@ -4,10 +4,7 @@ async function loadHTML(id, file) {
     if (!res.ok) throw new Error(`Failed to fetch ${file}`);
     document.getElementById(id).innerHTML = await res.text();
 
-    if (id === "header") {
-      initHamburger();
-    }
-
+    if (id === "header") initHamburger();
   } catch (err) {
     console.error(err);
   }
@@ -17,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadHTML("header", "/header.html");
   loadHTML("footer", "/footer.html");
 
+  // 모달
   const modal = document.getElementById("contactModal");
   const closeBtn = document.getElementById("closeModalBtn");
   const form = document.getElementById("contactForm");
@@ -24,43 +22,35 @@ document.addEventListener("DOMContentLoaded", () => {
   if (modal) modal.style.display = "block";
   if (closeBtn) closeBtn.onclick = () => { modal.style.display = "none"; };
 
-  if (form) {
-    form.onsubmit = (e) => {
-      e.preventDefault();
-      const message = form.message.value;
-      const phone = form.phone.value;
-
-      console.log("보낼 데이터:", { message, phone });
-      alert("메시지가 전송되었습니다!");
-      form.reset();
-      modal.style.display = "none";
-    };
-  }
-
+  // 개인정보 수집 펼치기
   const openConsent = document.getElementById("openConsent");
   const consentText = document.getElementById("consentText");
+  if (openConsent) {
+    openConsent.addEventListener("click", e => {
+      e.preventDefault();
+      consentText.style.display = consentText.style.display === "none" ? "block" : "none";
+    });
+  }
 
-  openConsent.addEventListener("click", function(e){
-    e.preventDefault();
-    if(consentText.style.display === "none"){
-      consentText.style.display = "block";
-    } else {
-      consentText.style.display = "none";
-    }
-  });
+  // 카드 클릭 이동
+  function bindCardLinks() {
+    const serviceCards = document.querySelectorAll(".card.service");
+    serviceCards.forEach(card => {
+      const link = card.dataset.link;
+      if (link) {
+        card.addEventListener("click", () => {
+          window.location.href = link;
+        });
+      }
+    });
+  }
+  bindCardLinks();
 
 });
 
 function initHamburger() {
   const hamburgerBtn = document.getElementById("hamburgerBtn");
   const navLinks = document.getElementById("navLinks");
-
-  if (!hamburgerBtn || !navLinks) {
-    console.warn("Hamburger elements not found in header");
-    return;
-  }
-
-  hamburgerBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-  });
+  if (!hamburgerBtn || !navLinks) return;
+  hamburgerBtn.addEventListener("click", () => navLinks.classList.toggle("show"));
 }

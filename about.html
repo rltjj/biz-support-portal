@@ -49,29 +49,25 @@
       window.onload = function () {
         var container = document.getElementById('map');
         var options = {
-          center: new kakao.maps.LatLng(35.1210, 129.0996), // 동명대학교 근처 좌표
+          center: new kakao.maps.LatLng(35.1210, 129.0996), 
           level: 3
         };
 
-        // 지도 생성
         var map = new kakao.maps.Map(container, options);
 
-        // 마커 생성
         var markerPosition = new kakao.maps.LatLng(35.1210, 129.0996);
         var marker = new kakao.maps.Marker({
           position: markerPosition
         });
         marker.setMap(map);
 
-        // 길찾기 버튼 클릭 이벤트
         document.getElementById('directionBtn').addEventListener('click', function () {
           var url = "https://map.kakao.com/link/to/동명대학교산학협력관,35.1210,129.0996";
-          window.open(url, "_blank"); // 새창에서 카카오맵 열기
+          window.open(url, "_blank"); 
         });
       }
     </script>
-
-
+    
   </main>
 
   <div id="footer"></div>

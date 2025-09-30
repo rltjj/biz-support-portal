@@ -222,48 +222,47 @@ a {
   padding: 1rem 2rem;
 }
 
-/* .section::before {
+.section::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.4);
 }
 
 #services-main {
-  background-image: url('/images/services-main.jpg');
+  background-image: url('/images/Service.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 #services-policy {
-  background-image: url('/images/services-policy.jpg');
+  background-image: url('/images/policy.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 #services-cert {
-  background-image: url('/images/services-cert.jpg');
+  background-image: url('/images/Package.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 #services-iso {
-  background-image: url('/images/services-iso.jpg');
+  background-image: url('/images/iso.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 #services-intro {
-  background-image: url('/images/services-iso.jpg');
+  background-image: url('/images/phone.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-} */
+}
 
 
 .section h2 {
@@ -279,16 +278,44 @@ a {
 
 .card.service {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row;  
+  justify-content: space-between; 
+  align-items: center; 
   padding: 1.5rem 2rem;
   border-radius: 16px;
-  background: var(--card);
-  color: var(--text2);
+  background: #003663;
+  color: #ffffff;
   font-size: 20px;
   font-weight: 300;
-  height: 100%;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.card.service > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.card.service .small {
+  font-size: 14px;
+}
+
+.card.service .consult-btn {
+  margin-left: auto;
+  background: var(--accent);
+  color: var(--text2);
+  font-size: 16px;
+  border: none;
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+.card.service .consult-btn a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .consult-btn {
@@ -299,8 +326,4 @@ a {
   border-radius: 16px;
   padding: 1rem 1.5rem;
   cursor: pointer;
-}
-
-.card.service .small{
-  font-size: 14px;
 }
